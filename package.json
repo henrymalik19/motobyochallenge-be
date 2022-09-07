@@ -8,6 +8,7 @@
     "db:start": "docker compose up -d",
     "db:stop": "docker compose down",
     "db:migrate": "npx prisma migrate dev",
+    "db:seed": "npx prisma db seed",
     "lint": "eslint --fix src",
     "lint:format": "prettier-eslint \"**/*.ts\"",
     "start:dev": "nodemon src/index.ts",
