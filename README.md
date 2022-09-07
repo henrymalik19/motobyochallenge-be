@@ -10,15 +10,13 @@ This is a coding challenge that consists of building a api that performs CRUD op
 
 ### Installing
 
-* How/where to download your program
-* Any modifications needed to be made to files/folders
-
-### Executing program
-
 * To install all dependencies
 ```
 npm install 
 ```
+
+### Executing program
+
 * Start database
 ```
 npm run db:start
@@ -31,7 +29,9 @@ npm run db:migrate
 ```
 npm run start:dev
 ```
-* Testing
+
+### Testing
+
 ```
 npm run test
 ```
