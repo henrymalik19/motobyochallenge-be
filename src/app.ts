@@ -1,5 +1,6 @@
 import express from 'express'
 import cors from 'cors'
+import morgan from 'morgan'
 
 // routers
 import healthcheckRouter from './routes/healthcheck.routes'
@@ -11,6 +12,7 @@ import { ErrorHandler, NotFound } from './middleware/errors.middleware'
 const app = express()
 
 app.use(cors())
+app.use(morgan('short'))
 app.use(express.json())
 
 app.use('/api/healthcheck', healthcheckRouter)
