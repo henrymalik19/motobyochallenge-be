@@ -1,4 +1,4 @@
-import { IUpdateEmployeeDto } from '../../../interfaces/employees.interfaces'
+import { IUpdateEmployeeDto } from '../../../interfaces/employees/employees.interfaces'
 import { EmployeeStatus } from '../../enums/employees/EmployeeStatus'
 
 export class UpdateEmployeeDto implements IUpdateEmployeeDto {

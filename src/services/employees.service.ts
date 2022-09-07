@@ -3,7 +3,7 @@ import NotFoundError from '../errors/NotFoundError'
 import { CreateEmployeeDto } from '../helpers/dtos/employees/CreateEmployeeDto'
 import { UpdateEmployeeDto } from '../helpers/dtos/employees/UpdateEmployeeDto'
 import { EmployeeStatus } from '../helpers/enums/employees/EmployeeStatus'
-import { IEmployee } from '../interfaces/employees.interfaces'
+import { IEmployee } from '../interfaces/employees/employees.interfaces'
 
 const prisma = new PrismaClient()
 

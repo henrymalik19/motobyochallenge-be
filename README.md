@@ -15,11 +15,27 @@ This is a coding challenge that consists of building a api that performs CRUD op
 
 ### Executing program
 
-* How to run the program
-* Step-by-step bullets
+* To install all dependencies
 ```
-code blocks for commands
+npm install 
 ```
+* Start database
+```
+npm run db:start
+```
+* Migrate and seed database
+```
+npm run db:migrate
+```
+* Start API
+```
+npm run start:dev
+```
+* Testing
+```
+npm run test
+```
+
 ## Authors
 
 Contributors names and contact info

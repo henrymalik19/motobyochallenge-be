@@ -1,4 +1,4 @@
-import { ICreateEmployeeDto } from '../../../interfaces/employees.interfaces'
+import { ICreateEmployeeDto } from '../../../interfaces/employees/employees.interfaces'
 import { EmployeeStatus } from '../../enums/employees/EmployeeStatus'
 
 export class CreateEmployeeDto implements ICreateEmployeeDto {
@@ -17,7 +17,7 @@ export class CreateEmployeeDto implements ICreateEmployeeDto {
         dateOfEmployment: string
     ) {
         this.firstName = firstName
-        this.middleInitial = middleInitial
+        this.middleInitial = middleInitial.toUpperCase()
         this.lastName = lastName
         this.dateOfBirth = dateOfBirth
         this.dateOfEmployment = dateOfEmployment

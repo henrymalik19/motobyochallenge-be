@@ -1,6 +1,6 @@
-import { IHttpResponse } from '../interfaces/IHttpResponse'
-import { statusCodes } from './enums/statusCodes'
-import { statusText } from './enums/statusText'
+import { IHttpResponse } from '../../interfaces/IHttpResponse'
+import { statusCodes } from '../enums/statusCodes'
+import { statusText } from '../enums/statusText'
 
 export default class CreatedResponse<T> implements IHttpResponse<T> {
     code: statusCodes = statusCodes.CREATED

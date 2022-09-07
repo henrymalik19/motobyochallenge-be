@@ -17,7 +17,7 @@ async function main(): Promise<void> {
             await prisma.employee.create({
                 data: {
                     firstName: employee.first_name,
-                    middleInitial: employee.first_name[2],
+                    middleInitial: employee.first_name[2].toUpperCase(),
                     lastName: employee.last_name,
                     dateOfBirth: employee.date_of_birth,
                     dateOfEmployment: '2018-06-12',

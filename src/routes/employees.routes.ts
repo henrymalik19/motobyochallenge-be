@@ -1,5 +1,6 @@
 import { Router } from 'express'
 import employeesController from '../controllers/employees.controller'
+import { asyncHandler } from '../helpers/asyncHandler'
 import { validateBody } from '../middleware/validate.middleware'
 import {
     createEmployeeSchema,
@@ -10,16 +11,19 @@ const employeesRouter = Router()
 
 employeesRouter
     .route('/')
-    .get(employeesController.findAllEmployees)
+    .get(asyncHandler(employeesController.findAllEmployees))
     .post(
         validateBody(createEmployeeSchema),
-        employeesController.createEmployee
+        asyncHandler(employeesController.createEmployee)
     )
 
 employeesRouter
     .route('/:id')
-    .get(employeesController.findEmployeeById)
-    .put(validateBody(updateEmployeeSchema), employeesController.updateEmployee)
-    .delete(employeesController.deleteEmployee)
+    .get(asyncHandler(employeesController.findEmployeeById))
+    .put(
+        validateBody(updateEmployeeSchema),
+        asyncHandler(employeesController.updateEmployee)
+    )
+    .delete(asyncHandler(employeesController.deleteEmployee))
 
 export default employeesRouter

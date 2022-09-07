@@ -3,7 +3,7 @@ import {
     createEmployeeSchema,
     employeeSchema,
     updateEmployeeSchema,
-} from '../schemas/employees.schema'
+} from '../../schemas/employees.schema'
 
 export type IEmployee = z.infer<typeof employeeSchema>
 export type ICreateEmployeeDto = z.infer<typeof createEmployeeSchema>

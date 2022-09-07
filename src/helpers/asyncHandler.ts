@@ -4,8 +4,7 @@ export const asyncHandler = (fn: Function) => {
     return async (req: Request, res: Response, next: NextFunction) => {
         try {
             const result = await fn(req, res, next)
-            console.log({ result })
-            res.status(result.code).json(result)
+            res.status(result.code).send(result)
         } catch (error) {
             next(error)
         }
