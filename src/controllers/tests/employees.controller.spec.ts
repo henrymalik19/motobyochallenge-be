@@ -177,7 +177,7 @@ describe('EmployeesController', () => {
             expect(res.code).toBe(200)
             expect(res.status).toBe('OK')
             expect(res.data?.id).toBe('123')
-            expect(res.data?.status).toBe('ACTIVE')
+            expect(res.data?.status).toBe('INACTIVE')
         })
 
         it('should throw an NotFoundError if id is not found', async () => {
