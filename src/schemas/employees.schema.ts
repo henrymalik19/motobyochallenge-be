@@ -10,9 +10,9 @@ export const employeeSchema = z
         createdAt: z.date(),
         updatedAt: z.date(),
 
-        firstName: z.string().max(50),
-        middleInitial: z.string().max(1),
-        lastName: z.string().max(50),
+        firstName: z.string().min(1).max(50),
+        middleInitial: z.string().min(1).max(1),
+        lastName: z.string().min(1).max(50),
         dateOfBirth: z.string().regex(dateRegex),
         dateOfEmployment: z.string().regex(dateRegex),
         status: z.nativeEnum(EmployeeStatus),
@@ -21,9 +21,9 @@ export const employeeSchema = z
 
 export const upsertEmployeeSchema = z
     .object({
-        firstName: z.string().max(50),
-        middleInitial: z.string().max(1),
-        lastName: z.string().max(50),
+        firstName: z.string().min(1).max(50),
+        middleInitial: z.string().min(1).max(1),
+        lastName: z.string().min(1).max(50),
         dateOfBirth: z.string().regex(dateRegex),
         dateOfEmployment: z.string().regex(dateRegex),
     })

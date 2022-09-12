@@ -8,9 +8,7 @@ import { IEmployee } from '../interfaces/employees/employees.interfaces'
 const prisma = new PrismaClient()
 
 const findAllEmployees = async (): Promise<IEmployee[]> => {
-    const employees = (await prisma.employee.findMany({
-        where: { status: EmployeeStatus.ACTIVE },
-    })) as IEmployee[]
+    const employees = (await prisma.employee.findMany()) as IEmployee[]
 
     return employees
 }
